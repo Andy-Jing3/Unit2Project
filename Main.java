@@ -20,11 +20,42 @@ public class Main {
             int temp = weather.getTemperature();
             int windSpeed = weather.getWindSpeed();
 
-            if (condition == ) {
-                System.out.println();
+            System.out.println("Day " + i + ": ");
+            System.out.println("Weather Condition: " + condition);
+            System.out.println("Temperature: " + temp + "°F");
+            System.out.println("Wind Speed: " + windSpeed + " mph");
+
+            if (condition.equals("Stormy")) {
+                System.out.println("!!WARNING!! Dangerous storms today stay inside!");
             }
 
+            if (condition.equals("Sunny")) {
+                System.out.println("!!WARNING!! Very bright today make sure to apply sunscreen");
+            }
+
+            if (condition.equals("Foggy")) {
+                System.out.println("!!WARNING!! Low visibility today!");
+            }
+
+            if (condition.equals("Rainy")) {
+                System.out.println("!!WARNING!! Raining today bring an umbrella!");
+            }
+
+            if (temp <= 35) {
+                System.out.println("!!WARNING!! Freezing temperatures today wear a coat! ");
+            }
+
+            else if (temp >= 85) {
+                System.out.println("!!WARNING!! Hot temperatures today stay hydrated!");
+            }
+
+            if (windSpeed >= 25) {
+                System.out.println("!!WARNING!! Strong winds today.");
+            }
+
+            System.out.println();
         }
+
     }
 }
 
