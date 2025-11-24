@@ -15,6 +15,11 @@ public class Main {
 
         System.out.println("Weather Forecast:");
 
+        int totalTemperatureSum = 0;
+        int highestWindSpeed = 0;
+        int highestTemperature = 0;
+
+
         for (int i = 1; i <= days; i++) {
             String condition = weather.getCondition();
             int temp = weather.getTemperature();
@@ -54,8 +59,23 @@ public class Main {
             }
 
             System.out.println();
+
+            totalTemperatureSum += temp;
+
+            if (windSpeed > highestWindSpeed) {
+                highestWindSpeed = windSpeed;
+            }
+
+            if (temp > highestTemperature) {
+                highestTemperature = temp;
+            }
         }
 
+        System.out.println("--- Simulation Summary ---");
+        double averageTemp = (double) totalTemperatureSum / days;
+        System.out.println("Average Temperature over " + days + " days: " + averageTemp + "°F");
+        System.out.println("Highest Wind Speed Recorded: " + highestWindSpeed + " mph");
+        System.out.println("Highest Temperature Recorded: " + highestTemperature + "°F");
     }
 }
 
