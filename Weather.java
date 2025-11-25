@@ -29,5 +29,9 @@ public class Weather {
     public int getWindSpeed() {
         return (int)(Math.random() * 41);
     }
+
+    public int getHumidity() {
+        return (int)(Math.random() * 101);
+    }
 }
 
